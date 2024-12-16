@@ -2,6 +2,7 @@ package ch.datadash.datadash_application.controller;
 
 import ch.datadash.datadash_application.service.DataService;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,6 +17,8 @@ public class DataController {
         this.dataService = dataService;
     }
 
+
+    @CrossOrigin
     @GetMapping("/sales")
     public String getSales() throws JsonProcessingException {
 
